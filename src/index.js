@@ -4,10 +4,18 @@ app.use(express.json());
 
 const userController = require("./controllers/user_controller");
 const searchItemController = require("./controllers/searchItem_controller");
-const productsController = require("./controllers/products_controller");
+const productController = require("./controllers/product_controller");
+const pulseController = require("./controllers/pulse_controller");
+const oilController = require("./controllers/oil_controller");
+const riceController = require("./controllers/rice_controller");
+const cartController = require("./controllers/cart_controller");
 
 app.use("/users",userController);
 app.use("/searches",searchItemController);
-app.use("/products",productsController);
+app.use("/products",productController);
+app.use("/pulses",pulseController);
+app.use("/oils", oilController);
+app.use("/rice", riceController);
+app.use("/carts",cartController);
 
 module.exports = app;
