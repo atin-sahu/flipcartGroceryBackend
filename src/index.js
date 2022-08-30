@@ -9,6 +9,7 @@ const pulseController = require("./controllers/pulse_controller");
 const oilController = require("./controllers/oil_controller");
 const riceController = require("./controllers/rice_controller");
 const cartController = require("./controllers/cart_controller");
+const {login,register} = require("./controllers/auth_controller");
 
 app.use("/users",userController);
 app.use("/searches",searchItemController);
@@ -17,5 +18,7 @@ app.use("/pulses",pulseController);
 app.use("/oils", oilController);
 app.use("/rice", riceController);
 app.use("/carts",cartController);
+app.post("/register", register);
+app.post("/login", login);
 
 module.exports = app;
