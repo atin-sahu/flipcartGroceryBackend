@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+var cors = require('cors')
+app.use(cors());
 app.use(express.json());
 
 const userController = require("./controllers/user_controller");
@@ -18,6 +20,7 @@ app.use("/pulses",pulseController);
 app.use("/oils", oilController);
 app.use("/rice", riceController);
 app.use("/carts",cartController);
+
 app.post("/register", register);
 app.post("/login", login);
 
