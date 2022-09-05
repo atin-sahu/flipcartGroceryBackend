@@ -14,7 +14,7 @@ router.get("/", async(req,res)=>{
 })
 
 
-// add authenticate in post request agter rout and before async function
+// add authenticate in post request after rout and before async function
 router.post("/", async(req,res)=>{
     // req.body.user = req.userID;
     try {

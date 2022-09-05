@@ -7,7 +7,7 @@ app.listen(process.env.PORT || 5000, async() =>{
     try {
         await connect();
     } catch (error) {
-        console.log(err);
+        console.log(error);
     }
     console.log("listning on port 5000");
 })

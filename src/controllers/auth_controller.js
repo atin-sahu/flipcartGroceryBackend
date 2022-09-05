@@ -12,9 +12,9 @@ const register = async(req, res)=>{
         if(user){
             return res.status(400).send({message:"email already exist"});
         }
-        user = await User.create(req.body)
+        user = await User.create(req.body);
         const token = generateToken(user);
-        return res.status(200).send({user,token});
+        return res.status(200).send({user, token});
     } catch (error) {
         return res.status(500).send({message:error.message});
     }
